@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class WebController {
 	
 	// Assignment 3 Step 3
-		@GetMapping("/anthony_t")
-		public String getURL() {
-			return "Anthony's API";
-		}
+	@GetMapping("/anthony_t")
+	public String getURL() {
+		return "Anthony's API";
+	}
 
 }
