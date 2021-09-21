@@ -2,14 +2,18 @@
     <html>
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="angular-route.js"></script>
+        <script src="Controller.js"></script>
+    </head>
     <body ng-app="EBTMap">
         <!-- This is just a sample as to how to use the controller -->
         <div ng-controller="MainController">
-            <li>{{list[0]}}</li>
-            <li>{{list[1]}}</li>
+            <input type="text" ng-model="searchBox">
+            <ul>
+                <li ng-repeat = "person in peoples| filter:searchBox">
+                    {{person.Name + ' : ' + person.Age}}
+                </li>
+            </ul>
         </div>
-        <!-- Import js file for controller and the module -->
-        <script src="Controller.js"></script>
     </body>
-    </head>
     </html>
