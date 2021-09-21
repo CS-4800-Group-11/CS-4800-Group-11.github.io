@@ -12,4 +12,8 @@ public class WebController {
 		return "Anthony's API";
 	}
 
+	@GetMapping("/ashley_k")
+	public String ashleyURL() {
+		return "Ashley's API";
+	}
 }
