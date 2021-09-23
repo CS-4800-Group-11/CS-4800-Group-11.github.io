@@ -11,6 +11,8 @@ import com.maxmind.geoip2.exception.GeoIp2Exception;
 import com.maxmind.geoip2.model.CityResponse;
 import com.maxmind.geoip2.record.Location;
 
+import com.fasterxml.jackson.databind.JsonNode;
+
 @RestController
 public class WebController {
 	
@@ -51,4 +53,9 @@ public class WebController {
 	for (Element headline : newsHeadlines) {
   		log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
 	}
+
+	//Anthony H A4
+	JsonNode jsonNode = objectMapper.readTree(new URL("https://cs-4800-group-11.github.io/text.json"));
+	//List<People> listofPeople = objectMapper.readValue(new URL("https://cs-4800-group-11.github.io/text.json"), new TypeReference<List<People>>(){});
+	System.out.println(jsonNode.get("records").get("Name");
 }
