@@ -13,6 +13,11 @@ import com.maxmind.geoip2.record.Location;
 
 import com.fasterxml.jackson.databind.JsonNode;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 @RestController
 public class WebController {
 	
@@ -58,4 +63,12 @@ public class WebController {
 	JsonNode jsonNode = objectMapper.readTree(new URL("https://cs-4800-group-11.github.io/text.json"));
 	//List<People> listofPeople = objectMapper.readValue(new URL("https://cs-4800-group-11.github.io/text.json"), new TypeReference<List<People>>(){});
 	System.out.println(jsonNode.get("records").get("Name");
+
+	//A4
+	Document document = Jsoup.connect("https://www.detectiveconanworld.com/wiki/Main_Page").get();
+	log(document.title());
+	Elements headlines = document.select("#mp-itn b a");
+	for(Element head : headlines){
+		log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
+	}
 }
