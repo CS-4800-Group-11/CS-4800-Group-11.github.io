@@ -65,10 +65,5 @@ public class WebController {
 	System.out.println(jsonNode.get("records").get("Name");
 
 	//A4
-	Document document = Jsoup.connect("https://www.detectiveconanworld.com/wiki/Main_Page").get();
-	log(document.title());
-	Elements headlines = document.select("#mp-itn b a");
-	for(Element head : headlines){
-		log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
-	}
+
 }
