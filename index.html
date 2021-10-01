@@ -4,16 +4,24 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
         <script src="angular-route.js"></script>
         <script src="Controller.js"></script>
+<!--        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="map.js"></script>
     </head>
     <body ng-app="EBTMap">
         <!-- This is just a sample as to how to use the controller -->
-        <div ng-controller="MainController">
-            <input type="text" ng-model="searchBox">
-            <ul>
-                <li ng-repeat = "person in peoples| filter:searchBox">
-                    {{person.Name + ' : ' + person.Age}}
-                </li>
-            </ul>
-        </div>
+<!--        <div ng-controller="MainController">-->
+<!--            <input type="text" ng-model="searchBox">-->
+<!--            <ul>-->
+<!--                <li ng-repeat = "person in peoples| filter:searchBox">-->
+<!--                    {{person.Name + ' : ' + person.Age}}-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+        <div id="map"></div>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9CqDqpOy35Z5TA8N2g-z6ftQs-iv2A6Y&callback=initMap&libraries=&v=weekly"
+            defer
+        ></script>
     </body>
     </html>
