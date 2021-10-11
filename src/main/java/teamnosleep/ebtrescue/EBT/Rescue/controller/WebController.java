@@ -31,47 +31,4 @@ public class WebController {
 	public String ashleyURL() {
 		return "Ashley's API";
 	}
-	
-	// Assignment 4 Step 2
-	@GetMapping("/location")
-	public String geolocation() throws IOException, GeoIp2Exception {		
-		URL whatismyip = new URL("http://checkip.amazonaws.com");
-		BufferedReader in = new BufferedReader(new InputStreamReader(whatismyip.openStream()));
-		String publicIP = in.readLine();
-		
-		String geoLocation = "";
-		try (WebServiceClient client = new WebServiceClient.Builder(606139, "cjsfbrqhPZj9omqT").host("geolite.info")
-		        .build()) {
-			
-		    InetAddress ipAddress = InetAddress.getByName(publicIP);
-		    CityResponse response = client.city(ipAddress);
-		    Location location = response.getLocation();
-		    geoLocation += (location.getLongitude() + ", " + location.getLatitude());
-		}
-		return geoLocation.equals("") ? "Could not get your location" : geoLocation;
-	}
-
-	//A4 Method example
-	Document doc = Jsoup.connect("https://en.wikipedia.org/").get();
-	log(doc.title());
-	Elements newsHeadlines = doc.select("#mp-itn b a");
-	for (Element headline : newsHeadlines) {
-  		log("%s\n\t%s", headline.attr("title"), headline.absUrl("href"));
-	}
-
-	//Anthony H A4
-	JsonNode jsonNode = objectMapper.readTree(new URL("https://cs-4800-group-11.github.io/text.json"));
-	//List<People> listofPeople = objectMapper.readValue(new URL("https://cs-4800-group-11.github.io/text.json"), new TypeReference<List<People>>(){});
-	System.out.println(jsonNode.get("records").get("Name");
-
-	//A4
-	double[] values = new double[] {65, 51 , 16, 11 , 6519, 191 ,0 , 98, 19854, 1, 32};
-	DescriptiveStatistics descriptiveStatistics = new DescriptiveStatistics();
-	for (double v : values) {
-		descriptiveStatistics.addValue(v);
-	}
-	
-	double mean = descriptiveStatistics.getMean();
-	double median = descriptiveStatistics.getPercentile(50);
-	double standardDeviation = descriptiveStatistics.getStandardDeviation();
 }
