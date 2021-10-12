@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 @SpringBootTest
 public class WebContollerTest {
@@ -22,5 +23,9 @@ public class WebContollerTest {
 	@Test
 	public void anthonyNAPITest() {
 		Assert.assertEquals("Anthony Nguyen's API", webController.anthonyNURL());
+	}
+
+	public void shivApiTest() {
+		Assert.assertEquals("Shiv's API", webController.shivURL());
 	}
 }
