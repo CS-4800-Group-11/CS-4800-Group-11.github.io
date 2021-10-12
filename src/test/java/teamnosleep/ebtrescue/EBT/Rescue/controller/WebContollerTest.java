@@ -19,4 +19,8 @@ public class WebContollerTest {
 	public void ashleyAPITest() {
 		Assert.assertEquals("Ashley's API", webController.ashleyURL());
 	}
+	@Test
+	public void anthonyNAPITest() {
+		Assert.assertEquals("Anthony Nguyen's API", webController.anthonyNURL());
+	}
 }
