@@ -1,4 +1,4 @@
-package teamnosleep.ebtrescue.EBT.Rescue.repositories;
+/*package teamnosleep.ebtrescue.EBT.Rescue.repositories;
 
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
@@ -20,3 +20,4 @@ public interface UserRepository extends JpaRepository<User, Long>, JpaSpecificat
         return (user, eq, cb) -> cb.equal(user.get("username"), username);
     }
 }
+*/

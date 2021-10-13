@@ -1,4 +1,4 @@
-package teamnosleep.ebtrescue.EBT.Rescue.services;
+/*package teamnosleep.ebtrescue.EBT.Rescue.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
@@ -27,3 +27,4 @@ public class UserService {
         );
     }
 }
+*/

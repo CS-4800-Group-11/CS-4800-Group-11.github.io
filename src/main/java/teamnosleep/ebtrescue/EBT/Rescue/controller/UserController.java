@@ -1,4 +1,4 @@
-package teamnosleep.ebtrescue.EBT.Rescue.controller;
+/*package teamnosleep.ebtrescue.EBT.Rescue.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -24,3 +24,4 @@ public class UserController {
     }
 
 }
+*/
