@@ -36,4 +36,9 @@ public class WebController {
 	public String anthonyNURL() {
 		return "Anthony Nguyen's API";
 	}
+
+	@GetMapping("/allison_c")
+	public String allisonURL() {
+		return "Allison's API";
+	}
 }
