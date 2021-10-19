@@ -5,34 +5,37 @@
 var app = angular.module('EBTMap', []);
 // Initialize the Controller to send data to the html file
 app.controller('MainController', function($scope, $http){
-    // The format should be very similar to the prof's example
-    $http({
-        method:'GET',
-        url: 'https://cs-4800-group-11.github.io/text.json'
-    }).then(function successCallback(response){
-        var people = JSON.parse(JSON.stringify(response)).data.records;
-        $scope.peoples = people
-    }, function errorCallback(response){
-    });
-    // Recieves data from backend
-    $http({
-        method:'GET',
-        url: '/stores.txt'
-    }).then(function successCallback(response){
-        $scope.students = response.data;
-    }, function errorCallback(response){
-        console.log("Error in getting stores");
-    });
-
-    $http({
-        method:'POST',
-        url: '/currentLocation.txt',
-        data: current_location
-    }).then(function successCallback(response){
-        console.log("Send Data: "+current_location.lat + " "+ current_location.lng);
-    }, function errorCallback(response){
-        console.log("error in sending current location");
-    });
+    window.initFirst = () => {
+        $http({
+            method:'GET',
+            url: 'https://cs-4800-group-11.github.io/text.json'
+        }).then(function successCallback(response){
+            var people = JSON.parse(JSON.stringify(response)).data.records;
+            $scope.peoples = people
+        }, function errorCallback(response){
+        });
+        // Recieves data from backend
+    //    $http({
+    //        method:'GET',
+        // This is just the url for stores
+    //        url: '/stores.json'
+    //    }).then(function successCallback(response){
+    //        var store = JSON.parse(JSON.stringify(response)).data.records;
+    //        $scope.stores = response.data;
+    //    }, function errorCallback(response){
+    //        console.log("Error in getting stores");
+    //    });
+        $http({
+            method:'POST',
+            //Place holder to test posting. To make it work just put like /post or /currentlocation or something
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            data: JSON.stringify(current_location)
+        }).then(function successCallback(response){
+            console.log("Send Data: "+JSON.stringify(current_location));
+        }, function errorCallback(response){
+            console.log("error in sending current location");
+        });
+    }
 });
 
 

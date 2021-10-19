@@ -2,7 +2,7 @@ let map;
 let current_location = {
     lat: 0,
     lng: 0
-  }
+  };
 function initMap() {
   var location = {
     lat: 34.049332,
@@ -20,7 +20,6 @@ function initMap() {
         location.lng = loc.coords.longitude;
         current_location.lat = loc.coords.latitude;
         current_location.lng = loc.coords.longitude;
-        console.log(current_location);
         map = new google.maps.Map(document.getElementById("map"), options);
     },
     (err) => {
@@ -52,15 +51,14 @@ function initMap() {
     })
     map = new google.maps.Map(document.getElementById("map"), options);
   });
-
-  var list = [location, Science_Building];
-  var ob = [];
-  for (let i=0;i<list.length;i++){
-    ob[i] = new google.maps.Marker({
-            position: list[i],
-            map: map,
-     });
-  }
+//  var list = [location, Science_Building];
+//  var ob = [];
+//  for (let i=0;i<list.length;i++){
+//    ob[i] = new google.maps.Marker({
+//            position: list[i],
+//            map: map,
+//     });
+//  }
 }
 
 

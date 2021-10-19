@@ -5,11 +5,11 @@
         <script src="angular-route.js"></script>
         <script src="Controller.js"></script>
 <!--        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>-->
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="style.css" />
         <script src="map.js"></script>
     </head>
-    <body ng-app="EBTMap">
-        <!-- This is just a sample as to how to use the controller -->
+    <body ng-app="EBTMap" ng-controller="MainController" ng-init="initFirst()">
+<!--         This is just a sample as to how to use the controller-->
 <!--        <div ng-controller="MainController">-->
 <!--            <input type="text" ng-model="searchBox">-->
 <!--            <ul>-->
@@ -19,7 +19,8 @@
 <!--            </ul>-->
 <!--        </div>-->
         <div id="sidebar" >
-        <input id="search" style="width: 100%; height: 50px;" placeholder="Enter starting address, city, or zip code">
+        <input id="search" placeholder="Enter starting address, city, or zip code">
+        <button id="inputlocation" type="button" onclick="initFirst()">Send Current Location</button>
         </div>
         <div id="map"></div>
         <script

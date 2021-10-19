@@ -2,7 +2,6 @@
   height: 100%;
   /* The height is 400 pixels */
   width: 75%;
-
   float:right;
   /* The width is the width of the web page */
 }
@@ -11,4 +10,16 @@
   background-color: aqua;
   height:100%;
   float: left;
+}
+#inputlocation{
+    width: 20%;
+    background-color: #e7e7e7;
+    color: black;
+    height: 50px;
+    float:right;
+}
+#search {
+    width: 80%;
+    height: 50px;
+    float: left;
 }
