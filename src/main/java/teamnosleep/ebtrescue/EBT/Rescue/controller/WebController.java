@@ -21,24 +21,4 @@ import org.jsoup.select.Elements;
 @RestController
 public class WebController {
 	
-	// Assignment 3 Step 3
-	@GetMapping("/anthony_t")
-	public String getURL() {
-		return "Anthony's API";
-	}
-
-	@GetMapping("/ashley_k")
-	public String ashleyURL() {
-		return "Ashley's API";
-	}
-
-	@GetMapping("/anthony_n")
-	public String anthonyNURL() {
-		return "Anthony Nguyen's API";
-	}
-
-	@GetMapping("/allison_c")
-	public String allisonURL() {
-		return "Allison's API";
-	}
 }
