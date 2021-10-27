@@ -29,7 +29,7 @@ app.controller('MainController', function($scope, $http){
             method:'POST',
             //Place holder to test posting. To make it work just put like /post or /currentlocation or something
             url: '/currentlocation',
-            data: JSON.stringify(current_location)
+            data: current_location
         }).then(function successCallback(response){
             console.log("Send Data: "+JSON.stringify(current_location));
         }, function errorCallback(response){
