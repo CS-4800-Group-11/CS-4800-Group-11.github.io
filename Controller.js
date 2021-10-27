@@ -28,7 +28,7 @@ app.controller('MainController', function($scope, $http){
         $http({
             method:'POST',
             //Place holder to test posting. To make it work just put like /post or /currentlocation or something
-            url: 'https://jsonplaceholder.typicode.com/posts',
+            url: '/currentlocation',
             data: JSON.stringify(current_location)
         }).then(function successCallback(response){
             console.log("Send Data: "+JSON.stringify(current_location));
