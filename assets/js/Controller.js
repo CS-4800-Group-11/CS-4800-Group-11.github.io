@@ -39,5 +39,9 @@ app.controller('MainController', function($scope, $http){
 });
 
 
-
+(function(){
+  $('#msbo').on('click', function(){
+    $('body').toggleClass('msb-x');
+  });
+}());
 
