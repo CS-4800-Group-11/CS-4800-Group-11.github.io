@@ -1,0 +1,266 @@
+[33mcommit 980d9985ca7fb938383de0ad0a503d31309a7f34[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Anthony Tran-Phan <tonyphan15@gmail.com>
+Date:   Wed Nov 3 15:34:05 2021 -0700
+
+    Updated the database connection                   connect to the remote database instead of local
+
+[33mcommit e719eeed58b149c1a97e915802d583356d0e6240[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Nov 2 18:21:48 2021 -0700
+
+    Bootstrap Changes
+    
+    I used a bootstrap template and modified it to work with out setup
+    The sidebar looks much better now.
+    I also cleaned up the js files and css files into the assets folder
+
+[33mcommit f0a264aefbb322429c3ec809c745cbb1da037d08[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Tue Nov 2 00:29:42 2021 -0700
+
+    Updates to POJOs
+    
+    Added @Entity annotation and create primary keys (things that identify each object uniquely). Should also be able to make these items serializable.
+    
+    This should fix the issue with calling getters and setters as well as compilation error.
+
+[33mcommit 97b39674a18043e1f06f863a826c76881a694647[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Wed Oct 27 14:39:26 2021 -0700
+
+    Small change to output the current location
+    
+    I change it so that it would output as a json file/object, not a string
+
+[33mcommit 2c70fea41482dce03d5ce629fc8792d206dd8656[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Wed Oct 27 14:33:31 2021 -0700
+
+    Make the http post into /currentlocation
+
+[33mcommit 0f0d48c0b493e6e5d327c4bd23170939dad216b6[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Oct 19 13:43:13 2021 -0700
+
+    Finished ajax and the http post request
+    
+    Now, we can link the backend to the frontend. The post request sends the current location when the button is clicked. The get request also received the data when the button is clicked. Might make a separate button for both
+
+[33mcommit c8c6ca9ecf86d3012a3c9cd5563b4ee2cf0b4a49[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Oct 19 11:28:46 2021 -0700
+
+    Accidentally broke something
+    
+    Just more testing to make sure it works
+
+[33mcommit e17d776a2d106810306d6c42a108ea9e242fe6d1[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Oct 19 11:16:40 2021 -0700
+
+    Merged two js files and tried to connect backend and frontend
+    
+    This is mainly testing and to make the frontend cleaner
+
+[33mcommit fbcb92abf3a3714ae5e8223be3e0dbba248ae240[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Mon Oct 18 20:08:01 2021 -0700
+
+    Removing Unused Code
+    
+    removed code not used for jar, added code into application.properties
+
+[33mcommit cfaac74234b6b32f5d27beadaf0cac33bdba054f[m
+Author: Allison Chen <allisonchen506@gmail.com>
+Date:   Tue Oct 12 23:37:02 2021 -0700
+
+    A6
+
+[33mcommit 66d96f1adacdda42fd83dd3504b7f6367f4352ff[m
+Author: Shiv Patel <toshiv31@gmail.com>
+Date:   Tue Oct 12 11:28:36 2021 -0700
+
+    Update WebContollerTest.java
+
+[33mcommit 19c9969bdb69b0df27685c8ad33b2a895d33e64b[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Oct 12 10:21:44 2021 -0700
+
+    A6
+    
+    Simple testing
+
+[33mcommit bebf87ed063996566cbdc1c39b77db850ffdf4db[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Mon Oct 11 23:46:20 2021 -0700
+
+    A6
+
+[33mcommit 7f066d4567d9f326a414e16f5d5baf419efb4ee0[m
+Author: Allison Chen <allisonchen506@gmail.com>
+Date:   Mon Oct 11 20:18:17 2021 -0700
+
+    sidebar
+
+[33mcommit a9532d48f0340a8a269b5eec7259a791f4b4f293[m
+Author: Anthony Tran-Phan <tonyphan15@gmail.com>
+Date:   Mon Oct 11 14:53:33 2021 -0700
+
+    Assignment 6 Commit (can be deleted later)
+
+[33mcommit 3305227815466a18eb074a8875b076b278142a92[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Sun Oct 10 19:04:35 2021 -0700
+
+    Adding Controllers, Repo, Service for User and Store POJOs
+    
+    *Removed unused code
+    *Added User controller, repo, service classes (done)
+    *Created Store controller, repo, service (not done)
+    *Included test classes for the project
+
+[33mcommit 385130439936c64681e585ec657d22b080478353[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Thu Oct 7 20:21:52 2021 -0700
+
+    Finished current location and Autocomplete
+    
+    Also, I created a working search bar
+
+[33mcommit c2d9595496cf0a1adf1f42cf8727b50da6674e63[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Fri Oct 1 11:27:22 2021 -0700
+
+    Store POJO + Removing Duplicate Code
+    
+    Added all the fields for the store. Removed the People class since User class has @Data to automatically created getters and setters.
+
+[33mcommit b6cf800b44fc9c19ef406bff3eff467ec6ce0658[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Fri Oct 1 09:52:43 2021 -0700
+
+    Initial Map and some test Markers
+    
+    Finished the Map and some test markers
+    Just keep in mind that this is not necessarily free.
+
+[33mcommit 1ca0509777919bfcb2d4171bb2e0b313ed49a793[m
+Author: Allison Chen <allisonchen506@gmail.com>
+Date:   Thu Sep 23 22:52:12 2021 -0700
+
+    A4
+
+[33mcommit 470a1e09bc06b6fef901402b580ec6cdf9910141[m
+Author: Allison Chen <allisonchen506@gmail.com>
+Date:   Thu Sep 23 22:51:36 2021 -0700
+
+    A4
+
+[33mcommit 5afedf986f1cf5766047ab0e6fd83845d36d725b[m
+Author: Allison Chen <allisonchen506@gmail.com>
+Date:   Thu Sep 23 22:49:30 2021 -0700
+
+    A4
+
+[33mcommit f87b6623c3bba337267dba491c57cf29e9235661[m
+Author: Allison Chen <allisonchen506@gmail.com>
+Date:   Thu Sep 23 22:48:10 2021 -0700
+
+    A4
+
+[33mcommit db159112d243b0fa1cf53a82aa15271922277ad9[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Thu Sep 23 10:21:36 2021 -0700
+
+    A4 Assignment
+    
+    Used Jackson
+
+[33mcommit e1c8558fec34c7a7719f71cdd02b99a9ad735852[m
+Author: Anthony Tran-Phan <tonyphan15@gmail.com>
+Date:   Wed Sep 22 11:27:09 2021 -0700
+
+    Assignment 4 Step 2
+
+[33mcommit c6176b81493abb2c36747bb7d357f0931095e4f2[m
+Author: Anthony Tran-Phan <tonyphan15@gmail.com>
+Date:   Wed Sep 22 11:22:38 2021 -0700
+
+    Assignment 4 Step 1
+
+[33mcommit 4dc949504fbb96af4d5f78e10a724854f46bd11d[m
+Author: Shiv Patel <toshiv31@gmail.com>
+Date:   Wed Sep 22 10:12:40 2021 -0700
+
+    Update WebController.java
+
+[33mcommit 11fdfa67bc3cf6ec481dd5060c44e04e199a60e2[m
+Author: Shiv Patel <toshiv31@gmail.com>
+Date:   Wed Sep 22 09:43:33 2021 -0700
+
+    Update pom.xml
+
+[33mcommit 1c3788a6ce820c5c6e3947cb2d052c5f0f20d4d5[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Sep 21 13:00:25 2021 -0700
+
+    Finished Basic HTML http get example
+
+[33mcommit 001433ef4c8d27092468392de05bd717dff0347d[m
+Merge: cd27a64 17b04e1
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Sep 21 12:07:38 2021 -0700
+
+    Merge branch 'main' of https://github.com/CS-4800-Group-11/CS-4800-Group-11.github.io into main
+
+[33mcommit cd27a6462f5fd7b3373f14ebb9b845226279b36b[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Tue Sep 21 12:07:22 2021 -0700
+
+    Testing Http (Ignore)
+
+[33mcommit 17b04e100fdf6fca2397c192e9ba4ad2a49d9ad6[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Tue Sep 21 11:26:31 2021 -0700
+
+    Updated to fix error with version
+
+[33mcommit 02497ff89aad0b139f59b45bba8ad843abcd4da8[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Tue Sep 21 10:35:38 2021 -0700
+
+    Updated A3
+    
+    Get mapping for API
+
+[33mcommit 91a03dfc452e464d02a4a983a33122dde35b2340[m
+Author: Anthony Tran-Phan <tonyphan15@gmail.com>
+Date:   Sun Sep 19 19:30:56 2021 -0700
+
+    Indentation fix
+
+[33mcommit 5fa861754091cfffbe77473d1e40739d39e4d664[m
+Author: Anthony Tran-Phan <tonyphan15@gmail.com>
+Date:   Sun Sep 19 19:29:03 2021 -0700
+
+    A3 Commit
+
+[33mcommit 26c7fa2028633329a7961b0ed4a4e7f0e3436269[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Sun Sep 19 12:58:44 2021 -0700
+
+    A4 Commit
+    
+    Used Lombok @Data annotation in User class. My previous creation of the project included me adding the dependency for Lombok.
+
+[33mcommit 51ffb4c2daa231f3bd7d630911385e1c70b006fe[m
+Author: WhoNew <22082099+18anguyen33@users.noreply.github.com>
+Date:   Sun Sep 19 11:16:15 2021 -0700
+
+    Simple Angular HTML Site
+
+[33mcommit 6aaca5760c77d0addeadbc0342aecbaa352f4494[m[33m ([m[1;31morigin/pullrequests[m[33m)[m
+Author: Ashley Kang <ashleykang483@gmail.com>
+Date:   Wed Sep 8 22:25:37 2021 -0700
+
+    Initial commit

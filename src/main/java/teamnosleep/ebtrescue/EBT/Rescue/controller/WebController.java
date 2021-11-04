@@ -6,11 +6,6 @@ import java.net.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.maxmind.geoip2.WebServiceClient;
-import com.maxmind.geoip2.exception.GeoIp2Exception;
-import com.maxmind.geoip2.model.CityResponse;
-import com.maxmind.geoip2.record.Location;
-
 import com.fasterxml.jackson.databind.JsonNode;
 
 import org.jsoup.Jsoup;
