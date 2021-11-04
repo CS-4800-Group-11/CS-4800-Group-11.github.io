@@ -1,47 +1,23 @@
 // Combined the two to make data transfer more convenient
 // Angular Section
-
+var stores = []
+var distance_amount = 0
+var num_stores = 0
 // Initialize the Module
 var app = angular.module('EBTMap', []);
+var base_address = 'http://ec2-13-52-81-37.us-west-1.compute.amazonaws.com:8080/nearestStores?latitude='
 // Initialize the Controller to send data to the html file
 app.controller('MainController', function($scope, $http){
     window.initFirst = () => {
+        distance_amount = document.getElementById("distance").value
+        num_stores = document.getElementById("store_number").value
         $http({
             method:'GET',
-            url: 'https://cs-4800-group-11.github.io/text.json'
+            url: 'http://ec2-13-52-81-37.us-west-1.compute.amazonaws.com:8080/nearestStores?latitude='+ current_location.lat +'&longitude='+ current_location.lng +'&distance='+ distance_amount +'&limit='+ num_stores
         }).then(function successCallback(response){
-            var people = JSON.parse(JSON.stringify(response)).data.records;
-            $scope.peoples = people
+            stores = JSON.parse(JSON.stringify(response)).data.records;
+            print(stores);
         }, function errorCallback(response){
-        });
-        // Recieves data from backend
-    //    $http({
-    //        method:'GET',
-        // This is just the url for stores
-    //        url: '/stores.json'
-    //    }).then(function successCallback(response){
-    //        var store = JSON.parse(JSON.stringify(response)).data.records;
-    //        $scope.stores = response.data;
-    //    }, function errorCallback(response){
-    //        console.log("Error in getting stores");
-    //    });
-        $http({
-            method:'POST',
-            //Place holder to test posting. To make it work just put like /post or /currentlocation or something
-            url: '/currentlocation',
-            data: current_location
-        }).then(function successCallback(response){
-            console.log("Send Data: "+JSON.stringify(current_location));
-        }, function errorCallback(response){
-            console.log("error in sending current location");
         });
     }
 });
-
-
-(function(){
-  $('#msbo').on('click', function(){
-    $('body').toggleClass('msb-x');
-  });
-}());
-

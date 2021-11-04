@@ -51,14 +51,15 @@ function initMap() {
     })
     map = new google.maps.Map(document.getElementById("map"), options);
   });
-//  var list = [location, Science_Building];
-//  var ob = [];
-//  for (let i=0;i<list.length;i++){
-//    ob[i] = new google.maps.Marker({
-//            position: list[i],
-//            map: map,
-//     });
-//  }
+
+  var ob = [];
+  for (let i=0;i<stores.length;i++){
+    var temp = {lat:stores[i].latitude, lng:stores[i].longitude}
+    ob[i] = new google.maps.Marker({
+            position: temp,
+            map: map,
+     });
+  }
 }
 
 
