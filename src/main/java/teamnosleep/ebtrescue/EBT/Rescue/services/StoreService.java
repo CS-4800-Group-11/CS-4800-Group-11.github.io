@@ -13,17 +13,26 @@ import static teamnosleep.ebtrescue.EBT.Rescue.repositories.StoreRepository.*;
 
 @Service
 public class StoreService {
-    @Autowired private StoreRepository storeRepository;
+	@Autowired
+	private StoreRepository storeRepository;
 
-    public List<Store> getAllStores() {
-        return storeRepository.findAll();
-    }
+	public List<Store> getAllStores() {
+		return storeRepository.findAll();
+	}
 
-    public Optional<Store> findSpecificStore(String address, String latitude, String longitude) {
-        return storeRepository.findOne(
-                Specification.where(addressEqualTo(address)
-                        .and(latitudeEqualTo(latitude)
-                        .and(longitudeEqualTo(longitude))))
-        );
-    }
+	public Optional<Store> getStoreById(int id) {
+		return storeRepository.findOne(Specification.where(idEqualTo(id)));
+	}
+
+	public Optional<Store> findSpecificStore(String address, String latitude, String longitude) {
+		return storeRepository.findOne(
+				Specification.where(addressEqualTo(address)
+						.and(latitudeEqualTo(latitude)
+						.and(longitudeEqualTo(longitude))))
+		);
+	}
+
+	public List<Store> findStoresByDistance(Double latitude, Double longitude, Double distance, Integer limit) {
+		return storeRepository.findStoresByDistance(latitude, longitude, distance, limit);
+	}
 }

@@ -1,24 +1,13 @@
 package teamnosleep.ebtrescue.EBT.Rescue.controller;
 
-import java.io.*;
-import java.net.*;
-
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-import com.maxmind.geoip2.WebServiceClient;
-import com.maxmind.geoip2.exception.GeoIp2Exception;
-import com.maxmind.geoip2.model.CityResponse;
-import com.maxmind.geoip2.record.Location;
-
-import com.fasterxml.jackson.databind.JsonNode;
-
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-
-@RestController
+@Controller
 public class WebController {
 	
+	@GetMapping("/")
+	public String home() {
+		return "index.html";
+	}
 }
