@@ -22,5 +22,4 @@ public class UserController {
     public ResponseEntity findSpecificUser(@RequestParam String firstName, String lastName, String userName) {
         return ResponseEntity.ok(userService.findSpecificUser(firstName, lastName, userName));
     }
-
 }
