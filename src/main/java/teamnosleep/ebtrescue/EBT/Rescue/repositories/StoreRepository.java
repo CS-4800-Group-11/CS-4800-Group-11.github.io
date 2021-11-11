@@ -11,7 +11,7 @@ import teamnosleep.ebtrescue.EBT.Rescue.data.Store;
 import java.util.List;
 
 @Repository
-public interface StoreRepository extends JpaRepository<Store, Long>, JpaSpecificationExecutor<Store> {
+public interface StoreRepository extends JpaRepository<Store, Integer>, JpaSpecificationExecutor<Store> {
     static Specification<Store> addressEqualTo (String address) {
         return (store, eq, cb) -> cb.equal(store.get("address"), address);
     }

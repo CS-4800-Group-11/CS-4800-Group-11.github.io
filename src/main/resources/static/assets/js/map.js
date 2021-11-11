@@ -51,16 +51,15 @@ function initMap() {
     })
     map = new google.maps.Map(document.getElementById("map"), options);
   });
-
+}
+function marker() {
   var ob = [];
   for (let i=0;i<stores.length;i++){
     var temp = {lat:stores[i].latitude, lng:stores[i].longitude}
     ob[i] = new google.maps.Marker({
             position: temp,
             map: map,
+            label: stores[i].storeName
      });
   }
 }
-
-
-
