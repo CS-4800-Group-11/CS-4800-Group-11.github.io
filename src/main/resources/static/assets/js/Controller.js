@@ -12,7 +12,7 @@ app.controller('MainController', function($scope, $http){
         num_stores = document.getElementById("store_number").value
         $http({
             method:'GET',
-            url: 'http://localhost:8080/nearestStores?latitude='+ current_location.lat +'&longitude='+ current_location.lng +'&distance='+ distance_amount +'&limit='+ num_stores
+            url: 'http://ec2-13-52-81-37.us-west-1.compute.amazonaws.com:8080/nearestStores?latitude='+ current_location.lat +'&longitude='+ current_location.lng +'&distance='+ distance_amount +'&limit='+ num_stores
         }).then(function successCallback(response){
             stores = JSON.parse(JSON.stringify(response)).data;
             console.log(stores);
