@@ -12,7 +12,6 @@ function initMap() {
     center: location,
     zoom: 20
   }
-  const Science_Building = {lat: 34.058515, lng: -117.824858};
   if (navigator.geolocation){
     console.log("Geolocation Supported");
     navigator.geolocation.getCurrentPosition((loc) => {
@@ -52,14 +51,43 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), options);
   });
 }
+var ob = [];
+var listOfInfo = [];
 function marker() {
-  var ob = [];
+  //Resets markers every time we call it
+  for (let j=0;j<ob.lenth;j++){
+    ob[j].setMap(null)
+    listOfInfo[j] = null;
+  }
   for (let i=0;i<stores.length;i++){
+    var contentString =
+    '<div id="content">' +
+    '<div id="siteNotice">' +
+    "</div>" +
+    '<h1 id="firstHeading" class="firstHeading">' + stores[i].storeName + '</h1>' +
+    '<div id="bodyContent">' +
+    "<p><b>Address: </b>" + stores.address + " " + stores.addressLine2
+    "<br><b>City: </b>" + stores.city +
+    "<br><b> State: </b>" + stores.state +
+    "<br><b> County: </b>" + stores.county +
+    "<br><b> Zip Code: </b>" + stores.zip5 + "-" + stores.zip4 + "</p>"
+    "</div>" +
+    "</div>";
+
     var temp = {lat:stores[i].latitude, lng:stores[i].longitude}
+    listOfInfo[i] = new google.maps.InfoWindow({
+        content: contentString,
+    })
     ob[i] = new google.maps.Marker({
             position: temp,
             map: map,
-            label: stores[i].storeName
      });
+     ob[i].addListener("click", ()=> {
+        listOfInfo[i].open({
+        anchor: ob[i],
+        map: map,
+        shouldFocus:false,
+        })
+     })
   }
 }
