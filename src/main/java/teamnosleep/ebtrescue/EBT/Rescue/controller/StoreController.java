@@ -39,9 +39,9 @@ public class StoreController {
 	
 	@GetMapping("/nearestStores")
 	public List<Store> getNearestStore(@RequestParam(value = "latitude") double latitude,
-										@RequestParam(value = "longitude") double longitude,
-									    @RequestParam(value = "distance") double distance,
-									    @RequestParam(value = "limit", required = false, defaultValue = "5") int limit) {
+									   @RequestParam(value = "longitude") double longitude,
+									   @RequestParam(value = "distance") double distance,
+									   @RequestParam(value = "limit", required = false, defaultValue = "5") int limit) {
 		return storeService.findStoresByDistance(latitude, longitude, distance, limit);
 	}
 }
