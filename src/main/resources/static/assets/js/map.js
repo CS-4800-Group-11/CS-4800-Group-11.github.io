@@ -66,11 +66,11 @@ function marker() {
     "</div>" +
     '<h1 id="firstHeading" class="firstHeading">' + stores[i].storeName + '</h1>' +
     '<div id="bodyContent">' +
-    "<p><b>Address: </b>" + stores.address + " " + stores.addressLine2
-    "<br><b>City: </b>" + stores.city +
-    "<br><b> State: </b>" + stores.state +
-    "<br><b> County: </b>" + stores.county +
-    "<br><b> Zip Code: </b>" + stores.zip5 + "-" + stores.zip4 + "</p>"
+    "<p><b>Address: </b>" + stores[i].address + " " + stores[i].addressLine2 +
+    "<br><b>City: </b>" + stores[i].city +
+    "<br><b> State: </b>" + stores[i].state +
+    "<br><b> County: </b>" + stores[i].county +
+    "<br><b> Zip Code: </b>" + stores[i].zip5 + "</p>"
     "</div>" +
     "</div>";
 
